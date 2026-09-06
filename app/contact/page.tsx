@@ -5,7 +5,7 @@ import { Clock, Mail, Phone, Pin } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Talk to East Tech Hub about dispatch, factoring, web development or e-commerce operations. We reply within one business day.',
+  description: 'Talk to East Tech Hub about dispatch, factoring introductions, web development or e-commerce operations. We reply within one business day.',
 };
 
 export default function ContactPage() {

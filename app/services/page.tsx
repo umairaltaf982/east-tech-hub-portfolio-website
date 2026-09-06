@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { services } from '@/lib/services';
 import { industries } from '@/lib/content';
 import { ArrowRight, Check } from '@/components/Icons';
-import { Cta } from '@/components/Sections';
+import { Cta, TechRail } from '@/components/Sections';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Four staffed departments: freight factoring for US carriers, 24/7 UK taxi dispatch, web development and SEO, and Amazon e-commerce operations.',
+    'Software development in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native, plus SEO and Meta ads, 24/7 UK taxi dispatch, RTS factoring introductions and Amazon e-commerce operations.',
 };
 
 export default function ServicesPage() {
@@ -20,8 +20,9 @@ export default function ServicesPage() {
           <span className="eyebrow">Services</span>
           <h1>Four departments</h1>
           <p className="lede">
-            Each one is a staffed desk with its own lead, tooling and shift pattern. Pick the one that matches the
-            problem you are trying to hand over.
+            Software development is our largest department — web apps, mobile apps and custom software across the
+            full stack, with SEO and Meta ads alongside. The other three are staffed desks, each with its own lead,
+            tooling and shift pattern.
           </p>
         </div>
       </section>
@@ -48,6 +49,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <TechRail />
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">

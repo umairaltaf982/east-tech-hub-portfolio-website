@@ -152,13 +152,18 @@ export const posts: Post[] = [
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
 
 /* ---------------- Testimonials ---------------- */
+/* PLACEHOLDER TESTIMONIALS — these are illustrative, not real customer quotes.
+   Replace each entry with a quote you have written permission to publish, and
+   swap the stock avatar for the person's own photo (or remove `avatar`).
+   Publishing invented reviews as if they were genuine is misleading to
+   prospects and is a real legal exposure in the UK, US and EU. */
 export const testimonials = [
   {
     quote: 'We handed over the eleven-to-six window as a one-month trial and never took it back. Overnight answer times are now better than our own day shift, and the handover note every morning means nothing gets lost between the two teams.',
     name: 'Operations Director', meta: 'Private hire operator · Manchester, UK', avatar: '/images/portrait-c.jpg',
   },
   {
-    quote: 'The credit checking is the part I did not know I needed. They caught a broker on a load I was about to accept, and that one call saved me more than the desk costs for a year.',
+    quote: 'I did not really understand how factoring worked and I did not want a sales pitch. They walked me through it, told me straight where it would help and where it would not, then put me in touch with RTS directly.',
     name: 'Owner-operator', meta: 'Freight carrier · Texas, USA', avatar: '/images/portrait-a.jpg',
   },
   {
@@ -176,9 +181,9 @@ export const cases = [
     tag: 'Taxi dispatch · United Kingdom', image: '/images/taxi-city.jpg',
   },
   {
-    kpi: 'Same day', kpiLabel: 'Funding on clean paperwork',
-    title: 'Back office for a forty-truck carrier in Texas',
-    body: 'Invoice submission, broker credit checking and collections moved to our desk, with a weekly aging report split by broker.',
+    kpi: 'RTS', kpiLabel: 'Introduced and set up',
+    title: 'Cash-flow review for a forty-truck carrier in Texas',
+    body: 'We walked the owner through how RTS factoring would work against his broker payment terms, answered the questions he had been putting off, then introduced him directly to the RTS team.',
     tag: 'Factoring · United States', image: '/images/truck-road.jpg',
   },
   {
@@ -191,8 +196,9 @@ export const cases = [
 
 /* ---------------- Industries ---------------- */
 export const industries = [
+  { name: 'Software & digital products', body: 'Web applications, mobile apps, APIs and internal business tools, built and maintained end to end.' },
   { name: 'Private hire & taxi', body: 'Account bookings, airport transfers, driver coordination and licensing-aware handling for UK operators.' },
-  { name: 'Freight & logistics', body: 'Carrier onboarding, rate confirmations, proof of delivery and broker credit for US trucking.' },
+  { name: 'Freight & logistics', body: 'Cash-flow conversations with US trucking carriers, and introductions to RTS Financial for invoice factoring.' },
   { name: 'Retail & e-commerce', body: 'Marketplace operations, catalogue integrity, paid media and storefront builds.' },
   { name: 'Construction & trades', body: 'Local search, service-area pages and lead handling for roofing, plumbing and building firms.' },
   { name: 'Professional services', body: 'Websites, reporting and enquiry handling for accountancy, legal and consultancy practices.' },
@@ -208,9 +214,9 @@ export const jobs = [
     tags: ['Clear spoken English', 'Calm under pressure', 'Comfortable on the phone', 'UK geography a plus'],
   },
   {
-    title: 'Customer Support Executive — US Shift', department: 'Factoring Desk', location: 'Lahore · On-site',
+    title: 'Customer Support Executive — US Shift', department: 'Client Desk', location: 'Lahore · On-site',
     shift: '18:00–03:00 PKT', type: 'Full time', openings: '2 openings',
-    body: 'Support US trucking carriers through onboarding, invoice submission and collections follow-up. You will check rate confirmations and bills of lading, chase brokers past terms, and keep the aging report current. Training on freight documentation provided — we hire for temperament and teach the paperwork.',
+    body: 'Speak with US trucking carriers about their cash-flow position, explain how factoring with RTS Financial works, and introduce the ones it suits to the RTS team. You will handle inbound enquiries, follow up on introductions and keep the client record accurate. Training on freight and factoring provided — we hire for temperament and teach the rest.',
     tags: ['Excellent written English', 'Detail-oriented', 'Comfortable with US callers', 'Shift differential'],
   },
   {
@@ -242,9 +248,9 @@ export const jobs = [
 /* ---------------- Why us ---------------- */
 export const differentiators = [
   { title: 'A named lead, not a queue', body: 'Every account gets a team lead who knows your drivers, your brokers or your catalogue. You have their direct line, not a ticket form.' },
-  { title: 'Weekly reporting you can act on', body: 'Booking volume, answer times, funded invoices, ad spend against booked work — sent every Monday in the same format, so trends are obvious.' },
+  { title: 'Weekly reporting you can act on', body: 'Booking volume, answer times, ad spend against booked work — sent every Monday in the same format, so trends are obvious.' },
   { title: 'Your timezone, not ours', body: 'Desks are staffed to UK and US clocks. The night shift is a permanent team on a permanent rota, not whoever is left online.' },
-  { title: 'We work inside your systems', body: 'Your dispatch software, your Seller Central, your ad accounts, your CRM. Nothing is locked behind a tool only we can log into.' },
+  { title: 'We work inside your systems', body: 'Your dispatch software, your Seller Central, your ad accounts, your CRM, your repository. Nothing is locked behind a tool only we can log into.' },
   { title: 'Priced per seat or per desk', body: 'Flat monthly rates by shift coverage or headcount. No per-booking surprises and no minimum contract beyond the first month.' },
   { title: 'Documented, so cover is real', body: 'Every account has a written runbook. When someone is off, the person covering follows the same steps — your callers never notice.' },
 ];

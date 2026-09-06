@@ -18,7 +18,7 @@ export default function BlogPage() {
           <span className="eyebrow">Insights</span>
           <h1>What we learn on the desks</h1>
           <p className="lede">
-            Short, practical write-ups from the people doing the work — dispatch, factoring, search and marketplaces.
+            Short, practical write-ups from the people doing the work — dispatch, freight, search and marketplaces.
             No thought leadership.
           </p>
         </div>

@@ -9,7 +9,7 @@ import { Cta, StatBand, TrustStrip } from '@/components/Sections';
 export const metadata: Metadata = {
   title: 'About us',
   description:
-    'East Tech Hub is an operations and digital partner headquartered in Lahore, running dispatch, factoring, web and e-commerce desks for clients across six countries.',
+    'East Tech Hub is an operations and digital partner headquartered in Lahore, building software and running dispatch and e-commerce desks, with clients across six countries.',
 };
 
 const principles = [
@@ -23,8 +23,8 @@ const principles = [
 
 const coverage = [
   { region: 'United Kingdom', title: 'Private hire & taxi', body: 'Dispatch desks for operators in Manchester, Birmingham, Leeds and Greater London. Overnight and full 24/7 cover.' },
-  { region: 'United States', title: 'Freight factoring', body: 'Owner-operators and small fleets funded through RTS Financial, with back-office support on Eastern and Central time.' },
-  { region: 'Canada · Ireland', title: 'Web, SEO & ads', body: 'Local service businesses — roofing, plumbing, trades — built, ranked and advertised against booked jobs.' },
+  { region: 'United States', title: 'Factoring introductions', body: 'A referral partner for RTS Financial. We explain how factoring works to owner-operators and small fleets, then introduce them directly to the RTS team.' },
+  { region: 'Global', title: 'Software development', body: 'Our largest department. Web apps, mobile apps, APIs and custom software in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native — with SEO and Meta ads on the same team.' },
   { region: 'Saudi Arabia · UAE', title: 'E-commerce & transport', body: 'Marketplace operations and storefront builds, plus dispatch consultancy for regional transport operators.' },
   { region: 'Pakistan', title: 'Our operations floor', body: 'Sharazi Street, Lahore. Three shift patterns, a development bay, and the training room where every runbook is rehearsed.' },
   { region: 'Remote', title: 'Wherever the desk is needed', body: 'If your hours do not fit an existing rota, we tell you honestly whether we can staff it before we quote for it.' },
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 the owner would have made, and followed it.
               </p>
               <p className="lede" style={{ marginBottom: '1rem' }}>
-                That runbook is still how we onboard every client. It is why a factoring desk, a dispatch desk and an
+                That runbook is still how we onboard every client. It is why a US client desk, a dispatch desk and an
                 Amazon account can sit on the same floor without any of them being run generically — the detail lives
                 in the document, not in one person&rsquo;s head.
               </p>

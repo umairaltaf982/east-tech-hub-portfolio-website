@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { services } from '@/lib/services';
-import { cases, differentiators, industries, onboarding, posts, testimonials } from '@/lib/content';
+import { cases, differentiators, industries, onboarding, posts } from '@/lib/content';
 import { stats } from '@/lib/site';
-import { ArrowRight, Check, Star } from '@/components/Icons';
-import { CaseCard, Cta, StatBand, TrustStrip } from '@/components/Sections';
+import { ArrowRight, Check } from '@/components/Icons';
+import { CaseCard, Cta, StatBand, TestimonialMarquee, TrustStrip } from '@/components/Sections';
 
 export default function HomePage() {
   return (
@@ -23,11 +23,12 @@ export default function HomePage() {
         <div className="hero-inner">
           <div className="container">
             <div className="hero-rule" />
-            <h1>The operations partner behind transport, freight and commerce businesses.</h1>
+            <h1>Dispatch desks, marketplace operations and software development, run by our team.</h1>
             <p>
-              We run the dispatch desks, funding desks and digital operations for companies across the
-              United Kingdom, United States, Canada, Ireland and the Gulf — staffed to your clock,
-              working inside your systems.
+              We build web applications, mobile apps and custom software, and run the dispatch desks,
+              client desks and marketplace operations behind businesses across the United Kingdom,
+              United States, Canada, Ireland and the Gulf — staffed to your clock, working inside
+              your systems.
             </p>
             <div className="hero-actions">
               <Link href="/schedule" className="btn btn-white">Talk to our team <ArrowRight /></Link>
@@ -56,7 +57,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow">Departments</span>
-            <h2>Four desks, each staffed and led by a person you will actually meet</h2>
+            <h2>Four departments, each led by a person you will actually meet</h2>
             <p>
               Every department runs to a written runbook you sign off before anything goes live, has its own
               shift pattern, and reports on the same numbers every Monday.
@@ -171,20 +172,7 @@ export default function HomePage() {
             <span className="eyebrow">Client voices</span>
             <h2>What operators say after the first quarter</h2>
           </div>
-          <div className="cards-3">
-            {testimonials.map((t) => (
-              <figure className="tcard glass reveal" key={t.name + t.meta} style={{ margin: 0 }}>
-                <div className="stars" aria-label="Five out of five">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} />)}
-                </div>
-                <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
-                <figcaption className="tperson">
-                  <Image src={t.avatar} alt="" width={92} height={92} className="avatar" />
-                  <div><b>{t.name}</b><span>{t.meta}</span></div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <TestimonialMarquee />
         </div>
       </section>
 

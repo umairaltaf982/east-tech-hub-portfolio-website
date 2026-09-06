@@ -4,6 +4,11 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [
+      { source: '/services/web-development-seo', destination: '/services/software-development', permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

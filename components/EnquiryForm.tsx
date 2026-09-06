@@ -111,7 +111,7 @@ export default function EnquiryForm({ variant }: { variant: Variant }) {
       <div className={isSchedule ? 'row-2' : ''}>
         <div className="field">
           <label htmlFor="department">{isSchedule ? 'Department' : 'Which department'}</label>
-          <select id="department" name="department" defaultValue={departments[1]}>
+          <select id="department" name="department" defaultValue={departments[0]}>
             {departments.map((d) => <option key={d}>{d}</option>)}
           </select>
         </div>

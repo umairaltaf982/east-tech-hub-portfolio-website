@@ -12,8 +12,8 @@ export default function Footer() {
           <div>
             <Image src="/images/logo-light.png" alt="East Tech Hub" width={284} height={200} className="flogo" style={{ height: 34, width: 'auto' }} />
             <p>
-              An operations and digital partner headquartered in Lahore, running factoring, dispatch,
-              web and e-commerce desks for clients across six countries.
+              A software development and operations partner headquartered in Lahore. We build web, mobile and
+              custom software, and run the dispatch and e-commerce desks behind clients in six countries.
             </p>
             <div className="socials">
               <a href={site.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook /></a>

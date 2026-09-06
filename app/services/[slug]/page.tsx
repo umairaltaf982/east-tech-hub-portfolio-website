@@ -94,8 +94,8 @@ export default async function ServicePage({ params }: Props) {
               <ul className="checks">
                 {s.included.map((b) => <li key={b}><Check />{b}</li>)}
               </ul>
-              <div style={{ borderRadius: 'var(--r)', overflow: 'hidden', marginTop: '1.8rem', boxShadow: 'var(--shadow)' }}>
-                <Image src={s.image} alt="" width={1000} height={620} sizes="(max-width: 1000px) 100vw, 50vw" />
+              <div className="svc-media">
+                <Image src={s.image} alt="" fill sizes="(max-width: 1000px) 100vw, 50vw" />
               </div>
             </div>
             <div className="panel glass reveal">
@@ -112,6 +112,29 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {s.tech && (
+        <section className="section" style={{ paddingTop: 0 }}>
+          <div className="container">
+            <div className="section-head reveal">
+              <span className="eyebrow">Technology</span>
+              <h2>The stack we build in</h2>
+              <p>
+                We pick the tool that fits the job and explain why. Everything below is written and maintained
+                in-house by our own developers in Lahore.
+              </p>
+            </div>
+            <div className="stack-grid">
+              {s.tech.map((t) => (
+                <div className="stack-card reveal" key={t.group}>
+                  <b>{t.group}</b>
+                  <ul>{t.items.map((i) => <li key={i}>{i}</li>)}</ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">

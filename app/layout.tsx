@@ -20,14 +20,18 @@ const manrope = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'East Tech Hub — Taxi dispatch, factoring, web & e-commerce operations',
+    default: 'East Tech Hub — Software development, taxi dispatch & e-commerce operations',
     template: '%s | East Tech Hub',
   },
   description:
-    '24/7 remote taxi dispatch for UK operators, freight invoice factoring for US carriers, web development and SEO, and Amazon e-commerce operations — run from Lahore for clients in six countries.',
+    'Software development in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native — web apps, mobile apps and custom software — plus SEO and Meta ads, 24/7 UK taxi dispatch, RTS factoring introductions and Amazon e-commerce operations. Run from Lahore for clients in six countries.',
   keywords: [
-    'taxi dispatch outsourcing', 'remote dispatch UK', 'freight factoring', 'RTS factoring',
-    'Amazon PPC management', 'web development Lahore', 'local SEO', 'Cordic', 'Autocab', 'Cab9',
+    'software development company Lahore', 'custom software development', 'web application development',
+    'mobile app development', 'Django development', 'Python development', 'React development',
+    'Next.js development', 'Node.js development', 'Laravel development', 'React Native app development',
+    'Flutter app development', 'API development', 'local SEO', 'Meta ads management', 'Google Ads management',
+    'taxi dispatch outsourcing', 'remote dispatch UK', 'freight factoring', 'RTS factoring referral',
+    'Amazon PPC management', 'Cordic', 'Autocab', 'Cab9',
   ],
   openGraph: {
     type: 'website',
@@ -35,7 +39,7 @@ export const metadata: Metadata = {
     url: site.url,
     title: 'East Tech Hub — operations partner for transport, freight and commerce',
     description:
-      'We run the dispatch desks, funding desks and digital operations behind businesses in the UK, US, Canada, Ireland and the Gulf.',
+      'We build web, mobile and custom software, and run the dispatch and e-commerce desks behind businesses in the UK, US, Canada, Ireland and the Gulf.',
     images: [{ url: '/images/hero-team.jpg', width: 1500, height: 1001, alt: 'The East Tech Hub operations floor' }],
   },
   twitter: { card: 'summary_large_image' },

@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { clientMarks, stats } from '@/lib/site';
-import { ArrowRight, ChevronRight } from './Icons';
+import { techRail } from '@/lib/services';
+import { testimonials } from '@/lib/content';
+import { ArrowRight, ChevronRight, Star } from './Icons';
 
 export function TrustStrip({ caption = 'Operators who work with us' }: { caption?: string }) {
   return (
@@ -83,5 +85,62 @@ export function CaseCard({ c }: { c: { kpi: string; kpiLabel: string; title: str
         <p>{c.body}</p>
       </div>
     </article>
+  );
+}
+
+export function TechRail() {
+  return (
+    <section className="section" style={{ paddingTop: 0 }}>
+      <div className="container">
+        <div className="section-head reveal">
+          <span className="eyebrow">Technology</span>
+          <h2>The stack our developers build in</h2>
+          <p>
+            Web apps, mobile apps, APIs and business software, written in-house in Lahore and led by
+            Umair Altaf — with SEO and Meta advertising handled by the same team.
+          </p>
+        </div>
+        <div className="tech-rail reveal">
+          {techRail.map((t) => <span key={t}>{t}</span>)}
+        </div>
+        <div className="hero-actions reveal" style={{ justifyContent: 'center', marginTop: '2rem' }}>
+          <Link href="/services/software-development" className="btn">
+            See what we build <ArrowRight />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Auto-scrolling testimonial wall. The list is rendered twice so the loop is
+   seamless: the animation shifts the track by exactly -50%, which lands the
+   second copy where the first began. Children carry margin-right rather than
+   the track carrying `gap`, so that -50% is exact. */
+export function TestimonialMarquee() {
+  const perGroup = Math.max(2, Math.ceil(2200 / (testimonials.length * 384)));
+  const group = Array.from({ length: perGroup }, () => testimonials).flat();
+  const seconds = group.length * 2 * 7;
+
+  const card = (t: (typeof testimonials)[number], key: string, hidden?: boolean) => (
+    <figure className="tcard glass" key={key} style={{ margin: 0 }} aria-hidden={hidden || undefined}>
+      <div className="stars" aria-label={hidden ? undefined : 'Five out of five'}>
+        {Array.from({ length: 5 }).map((_, i) => <Star key={i} />)}
+      </div>
+      <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+      <figcaption className="tperson">
+        <Image src={t.avatar} alt="" width={92} height={92} className="avatar" />
+        <div><b>{t.name}</b><span>{t.meta}</span></div>
+      </figcaption>
+    </figure>
+  );
+
+  return (
+    <div className="marquee reveal" style={{ ['--marquee-duration' as string]: `${seconds}s` }}>
+      <div className="marquee-track">
+        {group.map((t, i) => card(t, `a${i}`))}
+        {group.map((t, i) => card(t, `b${i}`, true))}
+      </div>
+    </div>
   );
 }

@@ -83,7 +83,7 @@ export default function Header() {
                 })}
                 <Link href="/services">
                   <span className="di"><ChevronDown style={{ transform: 'rotate(-90deg)' }} /></span>
-                  <span><b>All departments</b><span>Compare the four desks side by side</span></span>
+                  <span><b>All departments</b><span>Compare the four departments side by side</span></span>
                 </Link>
               </div>
             </div>
