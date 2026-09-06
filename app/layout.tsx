@@ -64,7 +64,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang="en" className={manrope.variable}>
-      <body>
+      {/* suppressHydrationWarning covers ONLY <body>'s own attributes. Browser
+          extensions (ColorZilla, Grammarly, dark-mode tools) inject attributes
+          here before React hydrates, which is not a bug in this app. Mismatches
+          inside the page are still reported normally. */}
+      <body suppressHydrationWarning>
         <a className="skip" href="#main">Skip to content</a>
         <Header />
         <main id="main">{children}</main>
