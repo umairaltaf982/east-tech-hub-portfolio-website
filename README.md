@@ -165,6 +165,26 @@ npm run dev       # or: npm run build && npm start
 Never run `next dev` and `next build` against the same `.next` without clearing it
 in between. `npm run rebuild` does the clear and the build in one step.
 
+### A page throws `Failed to parse src ... on next/image`
+
+An image path is wrong. Paths are served from `/public`, so they must start with
+a leading slash and must **not** include `public/`:
+
+```
+'/images/whiteboard.jpg'          correct
+'public/images/whiteboard.jpg'    wrong — 404 at runtime
+'images/whiteboard.jpg'           wrong — not an absolute path
+```
+
+Catch these before they reach a page:
+
+```bash
+npm run check      # validates every image path and internal link
+```
+
+This also runs automatically before `npm run build`, so a broken path fails the
+build with a clear message instead of surfacing as a runtime error after deploy.
+
 ### A page looks empty until I reload
 
 Fixed in this version. The scroll fade-in now re-runs on every client-side

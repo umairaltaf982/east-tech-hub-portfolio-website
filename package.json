@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-assets.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "check": "node scripts/check-assets.mjs",
+    "typecheck": "tsc --noEmit",
     "clean": "rm -rf .next",
     "rebuild": "rm -rf .next && next build"
   },

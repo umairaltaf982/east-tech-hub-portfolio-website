@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Manrope } from 'next/font/google';
+import localFont from 'next/font/local';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -8,11 +8,13 @@ import Reveal from '@/components/Reveal';
 import { site } from '@/lib/site';
 import './globals.css';
 
-const manrope = Manrope({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+/* Manrope is self-hosted (SIL Open Font License 1.1) so builds never depend on
+   reaching Google Fonts. Variable file covers weights 200-800. */
+const manrope = localFont({
+  src: [{ path: './fonts/Manrope-Variable.woff2', weight: '200 800', style: 'normal' }],
   variable: '--font-manrope',
   display: 'swap',
+  fallback: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 export const metadata: Metadata = {

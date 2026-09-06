@@ -70,13 +70,6 @@ export default async function MemberPage({ params }: Props) {
                 {m.owns.map((o) => <li key={o}><Check />{o}</li>)}
               </ul>
 
-              <div className="panel glass" style={{ marginTop: '2rem' }}>
-                <p style={{ fontSize: '.88rem', color: 'var(--soft)', lineHeight: 1.7 }}>
-                  Photographs are pending. To add one, drop a square-ish image at{' '}
-                  <code>/public/images/team/{m.slug}.jpg</code> and set the <code>photo</code> field for {first} in{' '}
-                  <code>lib/team.ts</code>.
-                </p>
-              </div>
             </div>
           </div>
         </div>
