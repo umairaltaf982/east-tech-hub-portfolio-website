@@ -153,33 +153,6 @@ export const team: Member[] = [
     ],
   },
   {
-    slug: 'abdul-aleem-sajjad',
-    name: 'Abdul Aleem Sajjad',
-    role: 'Team Lead — Call Handling',
-    department: 'Operations',
-    initials: 'AS',
-    gradient: ['#F0715C', '#16305C'],
-    photo: '/images/team/abdul-aleem-sajjad.jpg',
-    short: 'Leads daytime call handling and the account-booking work behind it.',
-    since: '2022',
-    hours: 'UK days',
-    bio: [
-      'Aleem leads daytime call handling across the UK desks. He handles the account and corporate booking work — the jobs with rules attached, where getting the pickup point or the meet-and-greet wrong costs a contract.',
-      'He also runs call quality reviews, listening back to a sample every week and coaching the team on the calls that could have gone better.',
-    ],
-    owns: [
-      'Daytime UK call handling',
-      'Corporate and account bookings',
-      'Call quality reviews and coaching',
-      'Booking accuracy and repeat-call reduction',
-    ],
-    facts: [
-      { label: 'Leads', value: 'Day desk' },
-      { label: 'Covers', value: 'UK 07:00–19:00' },
-      { label: 'Focus', value: 'Accounts & quality' },
-    ],
-  },
-  {
     slug: 'daud-ather',
     name: 'Daud Ather',
     role: 'Meta Ads Handler',
