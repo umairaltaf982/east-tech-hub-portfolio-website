@@ -9,7 +9,7 @@ import { Cta, TechRail } from '@/components/Sections';
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Software development in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native, plus SEO and Meta ads, 24/7 UK taxi dispatch, RTS factoring introductions and Amazon e-commerce operations.',
+    'Six departments: software development, digital marketing, US truck dispatching, freight factoring introductions, 24/7 UK taxi dispatch and Amazon e-commerce operations.',
 };
 
 export default function ServicesPage() {
@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <section className="page-hero">
         <div className="container">
           <span className="eyebrow">Services</span>
-          <h1>Four departments</h1>
+          <h1>Six departments</h1>
           <p className="lede">
             Software development is our largest department — web apps, mobile apps and custom software across the
             full stack, with SEO and Meta ads alongside. The other three are staffed desks, each with its own lead,

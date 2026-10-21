@@ -7,7 +7,7 @@ import { Cta } from '@/components/Sections';
 
 export const metadata: Metadata = {
   title: 'Our team',
-  description: 'Seven leads across four departments at East Tech Hub — the people who would run your desk.',
+  description: 'The team at East Tech Hub — the people who would run your account, across six departments.',
 };
 
 export default function TeamPage() {
@@ -16,7 +16,7 @@ export default function TeamPage() {
       <section className="page-hero">
         <div className="container">
           <span className="eyebrow">Our team</span>
-          <h1>Seven leads, four departments</h1>
+          <h1>The people who run your account</h1>
           <p className="lede">
             Select anyone to see what they own, which desks they cover and how to reach them.
           </p>
