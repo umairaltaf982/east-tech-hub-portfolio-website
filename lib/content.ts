@@ -163,7 +163,7 @@ export const testimonials = [
     name: 'Operations Director', meta: 'Private hire operator · Manchester, UK', avatar: '/images/portrait-c.jpg',
   },
   {
-    quote: 'I did not really understand how factoring worked and I did not want a sales pitch. They walked me through it, told me straight where it would help and where it would not, then put me in touch with RTS directly.',
+    quote: 'I did not really understand how factoring worked and I did not want a sales pitch. They walked me through it, told me straight where it would help and where it would not, then put me in touch with a factoring company directly.',
     name: 'Owner-operator', meta: 'Freight carrier · Texas, USA', avatar: '/images/portrait-a.jpg',
   },
   {
@@ -181,9 +181,9 @@ export const cases = [
     tag: 'Taxi dispatch · United Kingdom', image: '/images/taxi-city.jpg',
   },
   {
-    kpi: 'RTS', kpiLabel: 'Introduced and set up',
+    kpi: 'Introduced', kpiLabel: 'To a factoring partner',
     title: 'Cash-flow review for a forty-truck carrier in Texas',
-    body: 'We walked the owner through how RTS factoring would work against his broker payment terms, answered the questions he had been putting off, then introduced him directly to the RTS team.',
+    body: 'We walked the owner through how factoring would work against his broker payment terms, answered the questions he had been putting off, then introduced him directly to a factoring partner.',
     tag: 'Factoring · United States', image: '/images/truck-road.jpg',
   },
   {
@@ -198,7 +198,7 @@ export const cases = [
 export const industries = [
   { name: 'Software & digital products', body: 'Web applications, mobile apps, APIs and internal business tools, built and maintained end to end.' },
   { name: 'Private hire & taxi', body: 'Account bookings, airport transfers, driver coordination and licensing-aware handling for UK operators.' },
-  { name: 'Freight & logistics', body: 'Cash-flow conversations with US trucking carriers, and introductions to RTS Financial for invoice factoring.' },
+  { name: 'Freight & trucking', body: 'Dispatching for owner-operators and small fleets — loads, rates, routes and paperwork — plus freight factoring introductions.' },
   { name: 'Retail & e-commerce', body: 'Marketplace operations, catalogue integrity, paid media and storefront builds.' },
   { name: 'Construction & trades', body: 'Local search, service-area pages and lead handling for roofing, plumbing and building firms.' },
   { name: 'Professional services', body: 'Websites, reporting and enquiry handling for accountancy, legal and consultancy practices.' },
@@ -216,7 +216,7 @@ export const jobs = [
   {
     title: 'Customer Support Executive — US Shift', department: 'Client Desk', location: 'Lahore · On-site',
     shift: '18:00–03:00 PKT', type: 'Full time', openings: '2 openings',
-    body: 'Speak with US trucking carriers about their cash-flow position, explain how factoring with RTS Financial works, and introduce the ones it suits to the RTS team. You will handle inbound enquiries, follow up on introductions and keep the client record accurate. Training on freight and factoring provided — we hire for temperament and teach the rest.',
+    body: 'Dispatch for US owner-operators and small fleets. You will search the boards for freight that fits the truck, negotiate the rate, check the broker, plan the route around hours of service, and keep the paperwork clean. Training on freight documentation and load boards provided — we hire for temperament and teach the rest.',
     tags: ['Excellent written English', 'Detail-oriented', 'Comfortable with US callers', 'Shift differential'],
   },
   {

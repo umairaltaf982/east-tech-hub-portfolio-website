@@ -65,6 +65,23 @@ export default async function ServicePage({ params }: Props) {
 
       <StatBand items={s.stats} />
 
+      {s.leads && (
+        <section className="section" style={{ paddingBottom: 0 }}>
+          <div className="container">
+            <div className="leads-row reveal">
+              {s.leads.map((l) => (
+                <Link href={`/team/${l.slug}`} className="lead-card glass" key={l.slug}>
+                  <span className="eyebrow">Who runs it</span>
+                  <b>{l.name}</b>
+                  <span>{l.covers}</span>
+                  <span className="link-arrow">Read profile <ArrowRight /></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="section">
         <div className="container">
           <div className="section-head reveal">
@@ -76,6 +93,7 @@ export default async function ServicePage({ params }: Props) {
               <div className="ind reveal" key={o.title}>
                 <span className="kicker">{String(i + 1).padStart(2, '0')}</span>
                 <b>{o.title}</b>
+                {o.owner && <span className="owner-tag">Led by {o.owner}</span>}
                 <span>{o.body}</span>
               </div>
             ))}

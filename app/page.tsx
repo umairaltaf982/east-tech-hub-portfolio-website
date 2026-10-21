@@ -23,12 +23,12 @@ export default function HomePage() {
         <div className="hero-inner">
           <div className="container">
             <div className="hero-rule" />
-            <h1>Dispatch desks, marketplace operations and software development, run by our team.</h1>
+            <h1>Truck dispatch, digital marketing and software development, run by our team.</h1>
             <p>
-              We build web applications, mobile apps and custom software, and run the dispatch desks,
-              client desks and marketplace operations behind businesses across the United Kingdom,
-              United States, Canada, Ireland and the Gulf — staffed to your clock, working inside
-              your systems.
+              We dispatch trucks for American carriers and private-hire fleets in the UK, build the
+              software and run the advertising behind growing businesses, and keep the marketplace
+              and back-office work moving — staffed to your clock, inside your own systems, for
+              clients across the UK, US, Canada, Ireland and the Gulf.
             </p>
             <div className="hero-actions">
               <Link href="/schedule" className="btn btn-white">Talk to our team <ArrowRight /></Link>
@@ -57,7 +57,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow">Departments</span>
-            <h2>Four departments, each led by a person you will actually meet</h2>
+            <h2>Six departments, each led by a person you will actually meet</h2>
             <p>
               Every department runs to a written runbook you sign off before anything goes live, has its own
               shift pattern, and reports on the same numbers every Monday.
