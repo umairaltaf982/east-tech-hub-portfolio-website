@@ -23,8 +23,9 @@ const principles = [
 
 const coverage = [
   { region: 'United Kingdom', title: 'Private hire & taxi', body: 'Dispatch desks for operators in Manchester, Birmingham, Leeds and Greater London. Overnight and full 24/7 cover.' },
-  { region: 'United States', title: 'Factoring introductions', body: 'A referral partner for RTS Financial. We explain how factoring works to owner-operators and small fleets, then introduce them directly to the RTS team.' },
-  { region: 'Global', title: 'Software development', body: 'Our largest department. Web apps, mobile apps, APIs and custom software in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native — with SEO and Meta ads on the same team.' },
+  { region: 'United States', title: 'Truck dispatching & factoring', body: 'A full dispatch desk for owner-operators and small fleets — loads, rates, routes and paperwork — plus introductions to freight factoring partners for carriers who need the cash-flow gap closed.' },
+  { region: 'Global', title: 'Software development', body: 'Our largest department. Web apps, mobile apps, APIs and custom software in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native.' },
+  { region: 'Global', title: 'Digital marketing & growth', body: 'Meta Ads and Shopify under Abid Naeem; Google Ads and SEO under Umair Altaf. Your accounts, your data, reported against booked work.' },
   { region: 'Saudi Arabia · UAE', title: 'E-commerce & transport', body: 'Marketplace operations and storefront builds, plus dispatch consultancy for regional transport operators.' },
   { region: 'Pakistan', title: 'Our operations floor', body: 'Sharazi Street, Lahore. Three shift patterns, a development bay, and the training room where every runbook is rehearsed.' },
   { region: 'Remote', title: 'Wherever the desk is needed', body: 'If your hours do not fit an existing rota, we tell you honestly whether we can staff it before we quote for it.' },
@@ -39,7 +40,7 @@ export default function AboutPage() {
           <h1>An operations floor, not an agency</h1>
           <p className="lede">
             East Tech Hub started in 2021 with one dispatch desk and three people on a night rota. Five years on we
-            run four departments from Lahore for clients in {site.countries.length} countries — and the night rota is
+            run six departments from Lahore for clients in {site.countries.length} countries — and the night rota is
             still the part we are proudest of.
           </p>
         </div>
@@ -133,7 +134,7 @@ export default function AboutPage() {
       <div className="section-tight"><TrustStrip /></div>
       <div style={{ paddingBottom: '1rem' }}>
         <Cta title="Meet the people who would run your account"
-             body="Seven leads across four departments. You will speak to the one who owns your desk before you sign anything."
+             body="Named leads across six departments. You will speak to the one who owns your desk before you sign anything."
              primary={{ href: '/team', label: 'See the team' }}
              secondary={{ href: '/schedule', label: 'Schedule a call' }} />
       </div>

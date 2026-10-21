@@ -27,9 +27,10 @@ export const stats = [
 ];
 
 export const deskHours = [
-  { desk: 'UK dispatch desk', hours: '24 / 7' },
+  { desk: 'US truck dispatch desk', hours: '24 / 7' },
+  { desk: 'UK taxi dispatch desk', hours: '24 / 7' },
   { desk: 'US client desk', hours: '09:00–18:00 EST' },
-  { desk: 'Software development', hours: '10:00–19:00 PKT, Mon–Sat' },
+  { desk: 'Software & marketing', hours: '10:00–19:00 PKT, Mon–Sat' },
   { desk: 'New enquiries', hours: 'Answered daily' },
 ];
 

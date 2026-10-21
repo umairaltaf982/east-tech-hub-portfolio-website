@@ -20,17 +20,19 @@ const manrope = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'East Tech Hub — Software development, taxi dispatch & e-commerce operations',
+    default: 'East Tech Hub — Software, marketing, truck dispatch & operations',
     template: '%s | East Tech Hub',
   },
   description:
-    'Software development in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native — web apps, mobile apps and custom software — plus SEO and Meta ads, 24/7 UK taxi dispatch, RTS factoring introductions and Amazon e-commerce operations. Run from Lahore for clients in six countries.',
+    'Software development in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native, plus Meta and Google Ads, SEO and Shopify, 24/7 US truck dispatching, freight factoring introductions, UK taxi dispatch and Amazon e-commerce operations. Run from Lahore for clients in six countries.',
   keywords: [
     'software development company Lahore', 'custom software development', 'web application development',
     'mobile app development', 'Django development', 'Python development', 'React development',
     'Next.js development', 'Node.js development', 'Laravel development', 'React Native app development',
     'Flutter app development', 'API development', 'local SEO', 'Meta ads management', 'Google Ads management',
-    'taxi dispatch outsourcing', 'remote dispatch UK', 'freight factoring', 'RTS factoring referral',
+    'truck dispatch services', 'truck dispatching company', 'owner operator dispatch', 'load board dispatching',
+    'freight rate negotiation', 'freight factoring', 'taxi dispatch outsourcing', 'remote dispatch UK',
+    'Meta Ads agency', 'Facebook Ads management', 'Shopify development', 'Shopify store setup',
     'Amazon PPC management', 'Cordic', 'Autocab', 'Cab9',
   ],
   openGraph: {

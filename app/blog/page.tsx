@@ -61,7 +61,7 @@ export default function BlogPage() {
 
       <div style={{ paddingBottom: '1rem' }}>
         <Cta title="Rather have us do it than read about it?"
-             body="Every note here comes out of work we run daily across four desks. Tell us which one you need covering."
+             body="Every note here comes out of work we run daily across six departments. Tell us which one you need covering."
              secondary={{ href: '/services', label: 'See departments' }} />
       </div>
     </>

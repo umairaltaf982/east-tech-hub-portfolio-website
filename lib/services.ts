@@ -3,14 +3,15 @@ export type Service = {
   name: string;
   short: string;
   region: string;
-  icon: 'factoring' | 'dispatch' | 'web' | 'ecommerce';
+  icon: 'factoring' | 'dispatch' | 'web' | 'ecommerce' | 'truck' | 'growth';
   image: string;
   tagline: string;
   intro: string;
   highlights: string[];
   stats: { value: string; label: string }[];
   tech?: { group: string; items: string[] }[];
-  offerings: { title: string; body: string }[];
+  leads?: { name: string; slug: string; covers: string }[];
+  offerings: { title: string; body: string; owner?: string }[];
   included: string[];
   process: { title: string; body: string }[];
   faqs: { q: string; a: string }[];
@@ -31,6 +32,9 @@ export const services: Service[] = [
       'Web apps, mobile apps, APIs and custom business software',
       'Python, Django, React, Next.js, Node, Laravel, Flutter, React Native',
       'SEO, Google Ads and Meta Ads on the same team',
+    ],
+    leads: [
+      { name: 'Umair Altaf', slug: 'umair-altaf', covers: 'Architecture, delivery and the build team' },
     ],
     stats: [
       { value: '12+', label: 'Languages and frameworks in-house' },
@@ -79,53 +83,162 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: 'digital-marketing',
+    name: 'Digital marketing & growth',
+    short: 'Meta Ads, Google Ads, SEO and Shopify — measured against booked work.',
+    region: 'Global · Paid media, search & commerce',
+    icon: 'growth',
+    image: '/images/whiteboard.jpg',
+    tagline: 'Spend that can be traced to a booked job, not a dashboard full of impressions.',
+    intro:
+      'We run paid social, paid search, organic search and Shopify storefronts for service businesses and online sellers. Abid Naeem owns Meta advertising and Shopify; Umair Altaf owns Google Ads and SEO. The accounts stay in your name, the tracking is set up properly before a penny is spent, and the monthly report shows enquiries and orders rather than reach.',
+    leads: [
+      { name: 'Abid Naeem', slug: 'abid-naeem', covers: 'Meta Ads and Shopify' },
+      { name: 'Umair Altaf', slug: 'umair-altaf', covers: 'Google Ads and SEO' },
+    ],
+    highlights: [
+      'Meta and Google campaigns built around booked work',
+      'Technical and local SEO that moves the map pack',
+      'Shopify builds, migrations and conversion work',
+    ],
+    stats: [
+      { value: 'Your accounts', label: 'You own every platform and the data' },
+      { value: 'GA4 + CAPI', label: 'Tracking set up before spend starts' },
+      { value: 'Monthly', label: 'Reporting on enquiries, not impressions' },
+      { value: '2 leads', label: 'Named owners for paid and for search' },
+    ],
+    offerings: [
+      { title: 'Meta Ads', owner: 'Abid Naeem', body: 'Facebook and Instagram campaigns from audience research through creative testing to the weekly read on what produced enquiries. Pixel and Conversions API configured properly so the platform optimises against real outcomes rather than clicks.' },
+      { title: 'Shopify', owner: 'Abid Naeem', body: 'New storefronts, migrations from WooCommerce or a marketplace, theme work, app setup, and the checkout and product-page changes that lift conversion. Payments, shipping and tax configured for the countries you actually sell into.' },
+      { title: 'Google Ads', owner: 'Umair Altaf', body: 'Search, Performance Max and Shopping campaigns with proper negative keyword work, conversion tracking and call tracking — so you can see which keyword rang the phone and which one only spent money.' },
+      { title: 'Search engine optimisation', owner: 'Umair Altaf', body: 'Site structure, internal linking, schema markup, Core Web Vitals, crawl and index hygiene, plus the content work that earns rankings rather than chasing them.' },
+      { title: 'Local SEO', owner: 'Umair Altaf', body: 'Google Business Profile, service-area pages, citations and review flow — aimed at the three-result map pack where trades, clinics and transport operators win or lose the enquiry.' },
+      { title: 'Tracking & reporting', body: 'GA4, Meta Pixel, Conversions API, Google Tag Manager and call tracking, wired up so every channel reports into the same place. One monthly report across all of it, in the same format each time.' },
+    ],
+    included: [
+      'Every account created in your name and owned by you',
+      'Tracking configured and verified before spend begins',
+      'A named lead for paid social and a named lead for search',
+      'Negative keywords and audience exclusions maintained, not set once',
+      'Creative and landing pages tested, not guessed',
+      'Call tracking so phone enquiries are counted',
+      'One monthly report covering every channel',
+      'No long contract — a month of notice is enough',
+    ],
+    process: [
+      { title: 'Audit & baseline', body: 'We look at what is running now, what it costs and what it produced. You get an honest read on whether the problem is spend, targeting, tracking or the page people land on — often it is the last two.' },
+      { title: 'Tracking first', body: 'Nothing scales until measurement is right. GA4, pixel, Conversions API and call tracking go in and get verified before we touch budgets.' },
+      { title: 'Build & launch', body: 'Campaigns, audiences, creative and landing pages built against a written plan with a budget you have approved. We start small and prove the channel before scaling it.' },
+      { title: 'Review monthly', body: 'One report, one call. What spent, what it produced, what we are changing next month and why. If a channel is not earning its place we will tell you to stop it.' },
+    ],
+    faqs: [
+      { q: 'Who actually runs my account?', a: 'Abid Naeem for Meta advertising and Shopify, Umair Altaf for Google Ads and SEO. You deal with the person doing the work, not an account manager relaying messages.' },
+      { q: 'Do we own the ad accounts?', a: 'Always. We work inside your Meta Business Manager, your Google Ads account and your Shopify admin. If we part ways you keep the history, the audiences, the creative and the learning.' },
+      { q: 'How long before SEO shows anything?', a: 'Technical fixes and Google Business Profile work often move local rankings in four to eight weeks. Competitive organic terms take months. Paid search produces data in days — which is why we usually run both and let paid fund the wait.' },
+      { q: 'What budget do we need to start?', a: 'It depends entirely on your market and what a customer is worth to you. We would rather work that out on a call than publish a number that is wrong for your business — and if the maths does not support paid media yet, we will say so.' },
+    ],
+  },
+  {
+    slug: 'truck-dispatch',
+    name: 'Truck dispatching',
+    short: 'A full dispatch desk for US owner-operators and small fleets.',
+    region: 'United States · 24/7',
+    icon: 'truck',
+    image: '/images/truck-road.jpg',
+    tagline: 'You drive. We find the loads, argue the rate and handle the paperwork.',
+    intro:
+      'We run the dispatch desk for owner-operators and small fleets across the United States. That means searching the boards for freight that actually fits your truck and your home time, negotiating the rate instead of accepting the first number, checking the broker before you commit, planning the route around hours of service and fuel, and keeping the paperwork clean so you get paid without chasing. One dispatcher who knows your truck, not a rota of strangers reading a script.',
+    highlights: [
+      'Load sourcing and rate negotiation on every booking',
+      'Route planning around hours of service, weather and fuel',
+      'Paperwork, broker setup and 24/7 driver support',
+    ],
+    stats: [
+      { value: '24/7', label: 'A dispatcher you can reach' },
+      { value: '48 states', label: 'Where we book freight' },
+      { value: 'Dedicated', label: 'One dispatcher per truck' },
+      { value: 'Weekly', label: 'Settlement and performance report' },
+    ],
+    offerings: [
+      { title: 'Finding loads', body: 'We work the load boards and our broker relationships to find freight that suits your equipment, your lanes and your home time — not whatever is closest to the top of the list. Dry van, reefer, flatbed, step deck and power only.' },
+      { title: 'Rate negotiation', body: 'Every load gets negotiated. We know what the lane paid last week, what the market is doing and when a broker is holding back margin, and we do not book a cheap load just to keep the truck moving.' },
+      { title: 'Broker communication', body: 'We set up with new brokers, check credit and days-to-pay before you commit, confirm every detail in writing and take the check calls, the detention conversations and the TONU arguments off your phone.' },
+      { title: 'Route planning', body: 'Routes built around hours of service, truck stops, fuel price, weigh stations, tolls, low bridges and weather — so the plan survives contact with the road and you are not improvising at 2am.' },
+      { title: 'Paperwork & documentation', body: 'Carrier packets, rate confirmations, bills of lading, proof of delivery, insurance certificates and W-9s — collected, checked and filed. Clean paperwork is the difference between getting paid in days and arguing for a month.' },
+      { title: '24/7 support for drivers', body: 'Breakdowns, reroutes, a receiver that will not unload, a shipper running four hours late — somebody picks up. Nights, weekends and holidays, because that is when most of it happens.' },
+    ],
+    included: [
+      'A named dispatcher who knows your truck and your preferences',
+      'Rate negotiated on every single load, no exceptions',
+      'Broker credit checked before you accept',
+      'Route plan with fuel stops and hours-of-service timing',
+      'All paperwork handled and filed',
+      'Detention, layover and TONU claims pursued on your behalf',
+      'Someone reachable 24/7, including weekends',
+      'Weekly report: miles, revenue, rate per mile, deadhead',
+    ],
+    process: [
+      { title: 'Onboarding & documents', body: 'We collect your MC and DOT numbers, insurance certificate, W-9 and bank details, and set you up with the broker packets so nothing holds up your first load.' },
+      { title: 'Your preferences, written down', body: 'Lanes you will run, lanes you will not, home time, equipment, minimum rate per mile, whether you take New York City. We write it down so every dispatcher works to the same rules.' },
+      { title: 'First week together', body: 'We talk through the first few loads before booking so you can see how we negotiate and correct us early. Most of the fine-tuning happens here.' },
+      { title: 'Steady state', body: 'We dispatch, you drive. A weekly call covers what the numbers did and whether anything about your preferences should change.' },
+    ],
+    faqs: [
+      { q: 'What does dispatching actually cover?', a: 'Finding and booking freight, negotiating the rate, setting up and dealing with brokers, planning routes, handling every piece of paperwork, and being reachable when something goes wrong on the road. What it does not cover is driving, compliance filing or your authority — those stay yours.' },
+      { q: 'Do I have to take every load you find?', a: 'No. Nothing gets booked without your say-so. We work to the preferences we agreed in writing, and if a load falls outside them we either skip it or ring you first.' },
+      { q: 'What equipment do you dispatch?', a: 'Dry van, reefer, flatbed, step deck and power only. If you run something unusual, tell us before you sign up and we will say honestly whether we know that market well enough to be useful.' },
+      { q: 'How quickly can you start?', a: 'Usually within a day or two of getting your paperwork. Broker setup is the slow part, and we start that the moment you send the documents over.' },
+      { q: 'Do you work with new authorities?', a: 'Yes, though be realistic — many brokers will not work with an authority under six months old, and factoring is harder to get. We will tell you up front what that means for your first few months rather than promising loads we cannot find.' },
+    ],
+  },
+  {
     slug: 'factoring',
-    name: 'Freight factoring introductions',
-    short: 'Introducing US carriers to RTS Financial for invoice factoring.',
-    region: 'United States · RTS referral partner',
+    name: 'Freight factoring',
+    short: 'Connecting US carriers with freight factoring partners.',
+    region: 'United States · Carrier cash flow',
     icon: 'factoring',
     image: '/images/dept-factoring.jpg',
     tagline: 'Get to the right factoring company with your questions already answered.',
     intro:
-      'We are a referral partner for RTS Financial, one of the largest factoring companies serving US trucking. If the gap between delivering a load and the broker paying is what holds your operation back, we will walk you through how factoring with RTS works, what it costs against what it frees up, and whether it actually suits the way you run — then introduce you directly to the RTS team. RTS holds the funding agreement and pays you. Our job is making sure you walk into that agreement understanding it.',
+      'Waiting thirty to sixty days for a broker to pay is what stops a carrier taking the next load. Freight factoring closes that gap — you sell the invoice and get most of the money within a day. We work with established factoring companies serving US trucking, and our job is the part before you sign: explaining how it works, what it costs against what it frees up, and whether it suits the way you run. Then we introduce you directly to the right people. The factoring company holds the agreement and pays you; we make sure you walk into it understanding it.',
     highlights: [
-      'A plain-English walkthrough of how RTS factoring works',
-      'A direct introduction to the RTS team',
+      'A plain-English walkthrough of how factoring works',
+      'A direct introduction to a factoring partner',
       'Your questions answered before you sign anything',
     ],
     stats: [
-      { value: 'RTS', label: 'Financial — our factoring partner' },
       { value: 'US-wide', label: 'Owner-operators and small fleets' },
-      { value: 'Direct', label: 'Introduction to the RTS team' },
+      { value: 'Direct', label: 'Introduction to a named contact' },
+      { value: 'No pressure', label: 'We will tell you if it does not suit' },
       { value: '1 day', label: 'We reply to enquiries' },
     ],
     offerings: [
       { title: 'A conversation about your operation', body: 'Fleet size, the brokers you haul for, how long they take to pay, what fuel is costing you. Factoring suits some carriers and not others, and that call is where you find out which one you are.' },
-      { title: 'How RTS factoring works', body: 'Advance rates, the reserve, recourse and non-recourse, the fuel card and the back-office tools that come with the account — explained in plain English before you speak to anyone in sales.' },
-      { title: 'What the application will ask for', body: 'The documents RTS will want — MC and DOT numbers, W-9, certificate of insurance, bank details — and the terms worth reading twice, so nothing in the process catches you out.' },
-      { title: 'A direct introduction', body: 'We put you in front of the right person at RTS rather than a web form, and pass on what you have already told us, so you are not explaining your situation for the third time.' },
-      { title: 'The questions worth asking', body: 'What happens when a broker does not pay, how the reserve is released, how notice periods work. We will tell you what to ask so you get straight answers rather than a brochure.' },
-      { title: 'The rest of your back office', body: 'If factoring is not the answer, or you also need dispatch cover, web work or marketplace support, those are desks we staff ourselves — and we will say so plainly rather than sell you something you do not need.' },
+      { title: 'How factoring works', body: 'Advance rates, the reserve, recourse versus non-recourse, fuel cards and the back-office tools that come bundled with an account — explained in plain English before you speak to anyone in sales.' },
+      { title: 'What the application will ask for', body: 'The documents a factor will want — MC and DOT numbers, W-9, certificate of insurance, bank details — and the terms worth reading twice, so nothing in the process catches you out.' },
+      { title: 'A direct introduction', body: 'We put you in front of the right person rather than a web form, and pass on what you have already told us, so you are not explaining your situation for the third time.' },
+      { title: 'The questions worth asking', body: 'What happens when a broker does not pay, how the reserve is released, how notice periods and minimum volumes work. We will tell you what to ask so you get straight answers rather than a brochure.' },
+      { title: 'The rest of your back office', body: 'If factoring is not the answer, or you also need truck dispatching, web work or marketplace support, those are desks we staff ourselves — and we will say so plainly rather than sell you something you do not need.' },
     ],
     included: [
       'A straight answer on whether factoring fits your operation',
       'How advance rates, reserves and fees actually work',
       'Recourse and non-recourse explained in plain English',
-      'The document list RTS will ask for, before you apply',
-      'A named contact at RTS rather than a web form',
+      'The document list you will be asked for, before you apply',
+      'A named contact rather than a web form',
       'Our read on the terms worth asking about',
       'No obligation to proceed after the call',
       'Conversations on US Eastern hours',
     ],
     process: [
       { title: 'Tell us where the cash is tight', body: 'A short call or a form. How long your brokers take to pay, what you have already tried, and what the gap is actually costing you in missed loads.' },
-      { title: 'We walk you through RTS', body: 'What the product does, what it costs, and what it will not fix. If the numbers do not work in your favour we will tell you that here rather than later.' },
-      { title: 'The introduction', body: 'We connect you directly to the RTS team with your situation already explained, so the first conversation starts somewhere useful.' },
-      { title: 'Your agreement with RTS', body: 'RTS runs the application, the approval and the funding, and pays you directly. If anything they send over needs unpacking, our line stays open.' },
+      { title: 'We walk you through it', body: 'What factoring does, what it costs, and what it will not fix. If the numbers do not work in your favour we will tell you here rather than later.' },
+      { title: 'The introduction', body: 'We connect you directly to a factoring partner with your situation already explained, so the first conversation starts somewhere useful.' },
+      { title: 'Your agreement', body: 'The factoring company runs the application, the approval and the funding, and pays you directly. If anything they send over needs unpacking, our line stays open.' },
     ],
     faqs: [
-      { q: 'Are you a factoring company?', a: 'No. We are a referral partner for RTS Financial. RTS is the factoring company — they underwrite the account, hold the agreement and pay you. What we do is explain how it works, answer your questions honestly and introduce you to the right people there.' },
-      { q: 'Why RTS rather than another factor?', a: 'RTS is one of the largest factoring companies in US trucking, and it is the one we know well enough to explain properly. The fuel card, the load board and the back-office tools that come with an account often matter as much as the advance rate. If what you need sits outside what they do, we will say so.' },
+      { q: 'Are you a factoring company?', a: 'No. We are an introduction partner. The factoring company underwrites the account, holds the agreement and pays you. What we do is explain how it works, answer your questions honestly and put you in front of the right people.' },
+      { q: 'How do you choose who to introduce me to?', a: 'By what you haul, who you haul for and how big you are. A fleet of twenty and a single owner-operator are not well served by the same agreement. If what you need sits outside what our partners do well, we will say so.' },
       { q: 'Does factoring suit every carrier?', a: 'No. If your brokers pay inside fifteen days and your margins are thin, the fee can cost you more than the cash-flow gap is worth. We would rather tell you that on a call than introduce you to something that does not help.' },
       { q: 'What should I have ready before we talk?', a: 'Your MC and DOT numbers, a rough monthly invoice volume, the brokers you haul for most often and how long they usually take to pay. That is enough for a conversation worth having.' },
     ],

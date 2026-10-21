@@ -25,7 +25,7 @@ export default function TermsPage() {
             are not a guarantee of the results any other business will achieve.</p>
 
           <h3>Third-party names</h3>
-          <p>Product and platform names such as RTS Financial, Cordic, Autocab, Cab9, iCabbi, Amazon, Google and Meta
+          <p>Product and platform names such as Cordic, Autocab, Cab9, iCabbi, Shopify, Amazon, Google and Meta
             are the trademarks of their respective owners and are used here only to describe the systems we work in.</p>
 
           <h3>Intellectual property</h3>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const perks = [
   { k: 'Shifts', t: 'Paid shift differential', b: 'Night and US-hours roles carry an uplift, transport home after 10pm, and a fixed rota published a month ahead.' },
   { k: 'Training', t: 'Two weeks before you take a call', b: 'Every new starter shadows a live desk before handling volume. Nobody is dropped in.' },
-  { k: 'Progression', t: 'Leads are promoted from the desk', b: 'All four of our current team leads started on the phones or in the build bay.' },
+  { k: 'Progression', t: 'Leads are promoted from the desk', b: 'Our current team leads started on the phones or in the build bay.' },
 ];
 
 export default function CareersPage() {
