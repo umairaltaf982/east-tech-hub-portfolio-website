@@ -47,7 +47,7 @@ export default async function MemberPage({ params }: Props) {
                   : <span className="initials" style={{ fontSize: '3rem' }} aria-hidden="true">{m.initials}</span>}
               </div>
               <div className="pb">
-                <h2 style={{ fontSize: '1.5rem', marginBottom: '.35rem' }}>{m.name}</h2>
+                <h1 style={{ fontSize: '1.5rem', marginBottom: '.35rem' }}>{m.name}</h1>
                 <span className="role">{m.role}</span>
                 <dl className="kv">
                   <div className="row"><dt>Department</dt><dd>{m.department}</dd></div>
@@ -70,7 +70,7 @@ export default async function MemberPage({ params }: Props) {
                 <p className="lede" style={{ marginTop: '1rem' }} key={p.slice(0, 24)}>{p}</p>
               ))}
 
-              <h3 style={{ fontSize: '1.2rem', margin: '2rem 0 1rem' }}>What {first} owns</h3>
+              <h2 style={{ fontSize: '1.2rem', margin: '2rem 0 1rem' }}>What {first} owns</h2>
               <ul className="checks">
                 {m.owns.map((o) => <li key={o}><Check />{o}</li>)}
               </ul>
