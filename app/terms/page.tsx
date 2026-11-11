@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { site } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'Terms of service', robots: { index: false, follow: true } };
+export const metadata: Metadata = {
+  title: 'Terms of service',
+  description:
+    'The terms that apply when you use the East Tech Hub website and when you engage any of our departments for work.',
+};
 
 export default function TermsPage() {
   return (

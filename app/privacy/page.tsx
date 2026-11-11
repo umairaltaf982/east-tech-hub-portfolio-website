@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { site } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'Privacy policy', robots: { index: false, follow: true } };
+export const metadata: Metadata = {
+  title: 'Privacy policy',
+  description:
+    'How East Tech Hub collects, uses and stores the information you send through our enquiry, callback and job application forms.',
+};
 
 export default function PrivacyPage() {
   return (
