@@ -6,7 +6,10 @@ import { posts } from '@/lib/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = ['', '/about', '/services', '/team', '/blog', '/careers', '/contact', '/schedule', '/privacy', '/terms'];
+  // /privacy and /terms are intentionally absent: both carry robots noindex
+  // until the legal text is reviewed, and listing a noindexed page in the
+  // sitemap is a contradiction Search Console reports as an error.
+  const staticRoutes = ['', '/about', '/services', '/team', '/blog', '/careers', '/contact', '/schedule'];
   return [
     ...staticRoutes.map((r) => ({
       url: `${site.url}${r}`,
