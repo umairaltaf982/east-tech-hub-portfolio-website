@@ -16,7 +16,7 @@ export default function HomePage() {
           <Image
             src="/images/hero-team.jpg"
             alt="The East Tech Hub operations floor in Lahore"
-            fill priority sizes="100vw"
+            fill priority fetchPriority="high" sizes="100vw"
             style={{ objectFit: 'cover' }}
           />
         </div>

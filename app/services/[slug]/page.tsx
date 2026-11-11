@@ -19,9 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!s) return {};
   return {
     alternates: { canonical: `/services/${s.slug}` },
-    title: s.name,
-    description: s.tagline,
-    openGraph: { title: `${s.name} | East Tech Hub`, description: s.tagline, images: [{ url: s.image }] },
+    title: s.seoTitle,
+    description: s.seoDescription,
+    openGraph: { title: `${s.seoTitle} | East Tech Hub`, description: s.seoDescription, images: [{ url: s.image }] },
   };
 }
 

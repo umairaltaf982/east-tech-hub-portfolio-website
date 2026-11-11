@@ -8,9 +8,9 @@ import { Cta, TechRail } from '@/components/Sections';
 import { altFor } from '@/lib/image-alt';
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: 'Six Departments, One Operations Partner',
   description:
-    'Six departments: software development, digital marketing, US truck dispatching, freight factoring introductions, 24/7 UK taxi dispatch and Amazon e-commerce operations.',
+    'Software development, Meta and Google Ads, SEO and Shopify, US truck dispatching, freight factoring, UK taxi dispatch and Amazon marketplace operations.',
 };
 
 export default function ServicesPage() {

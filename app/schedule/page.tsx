@@ -4,8 +4,9 @@ import EnquiryForm from '@/components/EnquiryForm';
 import { Bolt, Shield, Users, WhatsApp } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Schedule a call',
-  description: 'Book a thirty-minute call with the East Tech Hub team lead for the department you need. No deck, no pressure.',
+  title: 'Schedule a Call With a Department Lead',
+  description:
+    'Book a thirty-minute call with the lead who would actually run your account. No deck, no pressure, and an honest answer on whether we fit.',
 };
 
 export default function SchedulePage() {

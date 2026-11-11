@@ -6,8 +6,9 @@ import { ArrowRight } from '@/components/Icons';
 import { Cta } from '@/components/Sections';
 
 export const metadata: Metadata = {
-  title: 'Careers',
-  description: 'Open roles at East Tech Hub in Lahore — dispatch, client support, development, SEO and Amazon PPC.',
+  title: 'Careers & Open Roles in Lahore',
+  description:
+    'Open roles at East Tech Hub in Lahore across dispatch, client support, software development, SEO and Amazon PPC. We hire for temperament.',
 };
 
 const perks = [

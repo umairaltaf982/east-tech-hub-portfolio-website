@@ -125,7 +125,7 @@ export function TestimonialMarquee() {
 
   const card = (t: (typeof testimonials)[number], key: string, hidden?: boolean) => (
     <figure className="tcard glass" key={key} style={{ margin: 0 }} aria-hidden={hidden || undefined}>
-      <div className="stars" aria-label={hidden ? undefined : 'Five out of five'}>
+      <div className="stars" role="img" aria-label="Rated five out of five">
         {Array.from({ length: 5 }).map((_, i) => <Star key={i} />)}
       </div>
       <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>

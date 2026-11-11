@@ -7,9 +7,9 @@ import { ArrowRight, Check } from '@/components/Icons';
 import { Cta, StatBand, TrustStrip } from '@/components/Sections';
 
 export const metadata: Metadata = {
-  title: 'About us',
+  title: 'Our Story & Operations Floor in Lahore',
   description:
-    'East Tech Hub is an operations and digital partner headquartered in Lahore, building software and running dispatch and e-commerce desks, with clients across six countries.',
+    'East Tech Hub builds software and runs dispatch, marketing and marketplace desks from Lahore for clients in the UK, US, Canada, Ireland and the Gulf.',
 };
 
 const principles = [

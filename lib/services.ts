@@ -2,6 +2,8 @@ export type Service = {
   slug: string;
   name: string;
   short: string;
+  seoTitle: string;
+  seoDescription: string;
   region: string;
   icon: 'factoring' | 'dispatch' | 'web' | 'ecommerce' | 'truck' | 'growth';
   image: string;
@@ -20,6 +22,9 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: 'software-development',
+    seoTitle: 'Custom Software & Mobile App Development',
+    seoDescription:
+      'Web apps, mobile apps, APIs and business software in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native. Built in-house.',
     name: 'Software development',
     short: 'Web apps, mobile apps and custom software — plus SEO and Meta ads.',
     region: 'Global · Build, launch & grow',
@@ -84,6 +89,9 @@ export const services: Service[] = [
   },
   {
     slug: 'digital-marketing',
+    seoTitle: 'Meta Ads, Google Ads, SEO & Shopify',
+    seoDescription:
+      'Paid social, paid search, SEO and Shopify storefronts, run inside your own accounts and reported against booked work rather than impressions.',
     name: 'Digital marketing & growth',
     short: 'Meta Ads, Google Ads, SEO and Shopify — measured against booked work.',
     region: 'Global · Paid media, search & commerce',
@@ -140,6 +148,9 @@ export const services: Service[] = [
   },
   {
     slug: 'truck-dispatch',
+    seoTitle: 'Truck Dispatch Services for US Carriers',
+    seoDescription:
+      '24/7 dispatching for owner-operators and small fleets. We find the loads, negotiate the rate, plan the route and handle every piece of paperwork.',
     name: 'Truck dispatching',
     short: 'A full dispatch desk for US owner-operators and small fleets.',
     region: 'United States · 24/7',
@@ -193,6 +204,9 @@ export const services: Service[] = [
   },
   {
     slug: 'factoring',
+    seoTitle: 'Freight Factoring for Trucking Companies',
+    seoDescription:
+      'Understand what factoring really costs before you sign. We explain advance rates, reserves and fees, then introduce you to the right partner.',
     name: 'Freight factoring',
     short: 'Connecting US carriers with freight factoring partners.',
     region: 'United States · Carrier cash flow',
@@ -245,6 +259,9 @@ export const services: Service[] = [
   },
   {
     slug: 'taxi-dispatch',
+    seoTitle: '24/7 Taxi & Private Hire Dispatch, UK',
+    seoDescription:
+      'Remote dispatch desks for UK private-hire operators, working inside your own Cordic, Autocab, Cab9 or iCabbi system. Nights or full 24/7 cover.',
     name: 'Taxi & private hire dispatch',
     short: 'A 24/7 remote dispatch desk working inside your own system.',
     region: 'United Kingdom · 24/7',
@@ -296,6 +313,9 @@ export const services: Service[] = [
   },
   {
     slug: 'ecommerce',
+    seoTitle: 'Amazon & E-commerce Account Management',
+    seoDescription:
+      'Marketplace operations for Amazon sellers: PPC, catalogue health, Buy Box monitoring and storefront builds, run by a named account lead.',
     name: 'E-commerce operations',
     short: 'Amazon advertising, catalogue integrity and storefront builds.',
     region: 'Marketplaces · Storefronts',

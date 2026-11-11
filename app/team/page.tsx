@@ -6,8 +6,9 @@ import { ChevronRight } from '@/components/Icons';
 import { Cta } from '@/components/Sections';
 
 export const metadata: Metadata = {
-  title: 'Our team',
-  description: 'The team at East Tech Hub — the people who would run your account, across six departments.',
+  title: 'Meet the Team Running Your Account',
+  description:
+    'The people who lead our six departments: what each of them owns, which desk they would run for you, and how to reach them directly.',
 };
 
 export default function TeamPage() {

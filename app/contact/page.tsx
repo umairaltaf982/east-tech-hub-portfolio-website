@@ -4,8 +4,9 @@ import EnquiryForm from '@/components/EnquiryForm';
 import { Clock, Mail, Phone, Pin } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Talk to East Tech Hub about dispatch, factoring introductions, web development or e-commerce operations. We reply within one business day.',
+  title: 'Contact Our UK, US & Lahore Desks',
+  description:
+    'Tell us which desk is hurting and we will say honestly whether we can staff it. We reply to every enquiry within one business day.',
 };
 
 export default function ContactPage() {

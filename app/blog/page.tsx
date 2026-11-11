@@ -6,8 +6,9 @@ import { Cta } from '@/components/Sections';
 import { altFor } from '@/lib/image-alt';
 
 export const metadata: Metadata = {
-  title: 'Insights',
-  description: 'Practical notes on taxi dispatch, freight factoring, SEO and marketplace operations, written by the East Tech Hub team.',
+  title: 'Notes on Dispatch, Freight, SEO & Commerce',
+  description:
+    'Practical write-ups from the people doing the work: truck and taxi dispatch, freight factoring, search, paid media and marketplace operations.',
 };
 
 export default function BlogPage() {

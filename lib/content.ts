@@ -6,13 +6,14 @@ export type Block =
   | { type: 'ul'; items: string[] };
 
 export type Post = {
-  slug: string; title: string; category: string; date: string; iso: string;
+  slug: string; title: string; seoTitle: string; category: string; date: string; iso: string;
   read: string; author: string; excerpt: string; image: string; body: Block[];
 };
 
 export const posts: Post[] = [
   {
     slug: 'three-am-problem',
+    seoTitle: 'Why UK Operators Lose Account Work at Night',
     title: 'The 3am problem: why UK operators lose account work overnight',
     category: 'Taxi dispatch', date: '19 August 2026', iso: '2026-08-19', read: '4 min',
     author: 'Faizan Shahid', image: '/images/taxi-city.jpg',
@@ -36,6 +37,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'advance-rate-cash-flow',
+    seoTitle: 'What a 97% Advance Rate Really Means',
     title: 'What a 97% advance rate actually means for your cash flow',
     category: 'Factoring', date: '28 August 2026', iso: '2026-08-28', read: '5 min',
     author: 'Daud Ather', image: '/images/truck-road.jpg',
@@ -58,6 +60,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'core-web-vitals-local',
+    seoTitle: 'Core Web Vitals: Three Fixes for Local Sites',
     title: 'Core Web Vitals for local service sites: the three fixes that matter',
     category: 'Web & SEO', date: '29 July 2026', iso: '2026-07-29', read: '5 min',
     author: 'Umair Altaf', image: '/images/whiteboard.jpg',
@@ -81,6 +84,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'acos-buy-box',
+    seoTitle: 'Cutting ACoS Without Losing the Buy Box',
     title: 'Cutting ACoS without losing the Buy Box',
     category: 'E-commerce', date: '16 July 2026', iso: '2026-07-16', read: '5 min',
     author: 'Muhammad Abdullah', image: '/images/dept-ecom.jpg',
@@ -102,6 +106,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'broker-credit-habit',
+    seoTitle: 'Broker Credit Checks That Prevent Bad Debt',
     title: 'Broker credit checks: the five-minute habit that prevents a bad debt',
     category: 'Factoring', date: '2 July 2026', iso: '2026-07-02', read: '4 min',
     author: 'Daud Ather', image: '/images/dept-factoring.jpg',
@@ -122,6 +127,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'dispatch-platform-handover',
+    seoTitle: 'What Changes When You Outsource Dispatch',
     title: 'Cordic, Autocab or Cab9: what actually changes when you outsource the desk',
     category: 'Taxi dispatch', date: '7 August 2026', iso: '2026-08-07', read: '6 min',
     author: 'Abdul Aleem Sajjad', image: '/images/dept-dispatch.jpg',

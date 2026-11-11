@@ -17,9 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const m = getMember(slug);
   if (!m) return {};
+  const role = m.role.replace(/\s*[—-]\s*East Tech Hub$/i, '');
   return {
     alternates: { canonical: `/team/${m.slug}` },
-    title: `${m.name} — ${m.role}`,
+    title: `${m.name} — ${role}`,
     description: m.short,
   };
 }
