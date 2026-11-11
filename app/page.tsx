@@ -5,6 +5,7 @@ import { cases, differentiators, industries, onboarding, posts } from '@/lib/con
 import { stats } from '@/lib/site';
 import { ArrowRight, Check } from '@/components/Icons';
 import { CaseCard, Cta, StatBand, TestimonialMarquee, TrustStrip } from '@/components/Sections';
+import { altFor } from '@/lib/image-alt';
 
 export default function HomePage() {
   return (
@@ -68,7 +69,7 @@ export default function HomePage() {
             {services.map((s) => (
               <Link href={`/services/${s.slug}`} className="dcard reveal" key={s.slug}>
                 <div className="dcard-media">
-                  <Image src={s.image} alt="" width={1000} height={563} sizes="(max-width: 1000px) 100vw, 50vw" />
+                  <Image src={s.image} alt={altFor(s.image, s.name)} width={1000} height={563} sizes="(max-width: 1000px) 100vw, 50vw" />
                   <span className="chip">{s.region.split(' · ')[0]}</span>
                 </div>
                 <div className="dcard-body">
@@ -156,7 +157,7 @@ export default function HomePage() {
               <div className="step" key={s.title}>
                 <span className="n">{String(i + 1).padStart(2, '0')}</span>
                 <div>
-                  <h4>{s.title}</h4>
+                  <h3>{s.title}</h3>
                   <p>{s.body}</p>
                 </div>
               </div>
@@ -188,7 +189,7 @@ export default function HomePage() {
             {posts.slice(0, 3).map((p) => (
               <Link href={`/blog/${p.slug}`} className="pcard reveal" key={p.slug}>
                 <div className="pcard-media">
-                  <Image src={p.image} alt="" width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
+                  <Image src={p.image} alt={altFor(p.image, p.title)} width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
                 </div>
                 <div className="pcard-body">
                   <span className="kicker">{p.category}</span>

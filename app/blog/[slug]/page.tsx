@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { getPost, posts } from '@/lib/content';
 import { ArrowLeft, ArrowRight } from '@/components/Icons';
 import { Cta } from '@/components/Sections';
+import { altFor } from '@/lib/image-alt';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getPost(slug);
   if (!p) return {};
   return {
+    alternates: { canonical: `/blog/${p.slug}` },
     title: p.title,
     description: p.excerpt,
     openGraph: { type: 'article', title: p.title, description: p.excerpt, publishedTime: p.iso, images: [{ url: p.image }] },
@@ -56,7 +58,7 @@ export default async function PostPage({ params }: Props) {
             <p className="pmeta" style={{ marginBottom: '1.8rem' }}>{p.date} · {p.read} read · {p.author}</p>
 
             <div className="article-media">
-              <Image src={p.image} alt="" width={1200} height={675} priority sizes="(max-width: 900px) 100vw, 900px" />
+              <Image src={p.image} alt={altFor(p.image, p.title)} width={1200} height={675} priority sizes="(max-width: 900px) 100vw, 900px" />
             </div>
 
             {p.body.map((b, i) => {
@@ -86,7 +88,7 @@ export default async function PostPage({ params }: Props) {
             {related.map((r) => (
               <Link href={`/blog/${r.slug}`} className="pcard reveal" key={r.slug}>
                 <div className="pcard-media">
-                  <Image src={r.image} alt="" width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
+                  <Image src={r.image} alt={altFor(r.image, r.title)} width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
                 </div>
                 <div className="pcard-body">
                   <span className="kicker">{r.category}</span>

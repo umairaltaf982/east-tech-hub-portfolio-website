@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>Departments</h4>
+            <h3>Departments</h3>
             <ul>
               {services.map((s) => (
                 <li key={s.slug}><Link href={`/services/${s.slug}`}>{s.name}</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>Company</h4>
+            <h3>Company</h3>
             <ul>
               <li><Link href="/about">About us</Link></li>
               <li><Link href="/team">Our team</Link></li>
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>Get in touch</h4>
+            <h3>Get in touch</h3>
             <ul>
               <li><a href={site.phoneHref}>{site.phone}</a></li>
               <li><a href={`mailto:${site.email}`}>{site.email}</a></li>

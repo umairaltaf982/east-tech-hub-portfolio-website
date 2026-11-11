@@ -1,7 +1,7 @@
 export const site = {
   name: 'East Tech Hub',
   tagline: 'Operations and digital partner',
-  url: 'https://easttechhub.com',
+  url: 'https://www.easttechhub.com',
   email: 'info@easttechhub.com',
   phone: '+92 328 2777277',
   phoneHref: 'tel:+923282777277',

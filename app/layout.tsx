@@ -7,6 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import Reveal from '@/components/Reveal';
 import { site } from '@/lib/site';
 import './globals.css';
+import { Analytics } from '@/components/Analytics';
 
 /* Manrope is self-hosted (SIL Open Font License 1.1) so builds never depend on
    reaching Google Fonts. Variable file covers weights 200-800. */
@@ -20,11 +21,12 @@ const manrope = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'East Tech Hub — Software, marketing, truck dispatch & operations',
+    default: 'Software, Marketing & Truck Dispatch | East Tech Hub',
     template: '%s | East Tech Hub',
   },
   description:
-    'Software development in Python, Django, React, Next.js, Node, Laravel, Flutter and React Native, plus Meta and Google Ads, SEO and Shopify, 24/7 US truck dispatching, freight factoring introductions, UK taxi dispatch and Amazon e-commerce operations. Run from Lahore for clients in six countries.',
+    'Software development, Meta and Google Ads, SEO, Shopify, 24/7 US truck dispatching and UK taxi dispatch — run from Lahore for clients in six countries.',
+  alternates: { canonical: './' },
   keywords: [
     'software development company Lahore', 'custom software development', 'web application development',
     'mobile app development', 'Django development', 'Python development', 'React development',
@@ -39,9 +41,9 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: site.name,
     url: site.url,
-    title: 'East Tech Hub — operations partner for transport, freight and commerce',
+    title: 'East Tech Hub — software, marketing and dispatch operations',
     description:
-      'We build web, mobile and custom software, and run the dispatch and e-commerce desks behind businesses in the UK, US, Canada, Ireland and the Gulf.',
+      'Software development, Meta and Google Ads, SEO and Shopify, 24/7 US truck dispatching, freight factoring introductions, UK taxi dispatch and Amazon e-commerce — run from Lahore.',
     images: [{ url: '/images/hero-team.jpg', width: 1500, height: 1001, alt: 'The East Tech Hub operations floor' }],
   },
   twitter: { card: 'summary_large_image' },
@@ -85,6 +87,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Analytics />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { posts } from '@/lib/content';
 import { Cta } from '@/components/Sections';
+import { altFor } from '@/lib/image-alt';
 
 export const metadata: Metadata = {
   title: 'Insights',
@@ -29,7 +30,7 @@ export default function BlogPage() {
           <Link href={`/blog/${lead.slug}`} className="dcard reveal" style={{ marginBottom: '1.5rem' }}>
             <div className="cards-2" style={{ gap: 0 }}>
               <div className="dcard-media" style={{ aspectRatio: '4 / 3' }}>
-                <Image src={lead.image} alt="" width={1200} height={900} sizes="(max-width: 1000px) 100vw, 50vw" priority />
+                <Image src={lead.image} alt={altFor(lead.image, lead.title)} width={1200} height={900} sizes="(max-width: 1000px) 100vw, 50vw" priority />
                 <span className="chip">Latest</span>
               </div>
               <div className="dcard-body" style={{ justifyContent: 'center' }}>
@@ -45,7 +46,7 @@ export default function BlogPage() {
             {rest.map((p) => (
               <Link href={`/blog/${p.slug}`} className="pcard reveal" key={p.slug}>
                 <div className="pcard-media">
-                  <Image src={p.image} alt="" width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
+                  <Image src={p.image} alt={altFor(p.image, p.title)} width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
                 </div>
                 <div className="pcard-body">
                   <span className="kicker">{p.category}</span>

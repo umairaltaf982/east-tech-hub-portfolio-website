@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { getService, services } from '@/lib/services';
 import { ArrowRight, Check, serviceIcon } from '@/components/Icons';
 import { Breadcrumb, Cta, StatBand } from '@/components/Sections';
+import { altFor } from '@/lib/image-alt';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const s = getService(slug);
   if (!s) return {};
   return {
+    alternates: { canonical: `/services/${s.slug}` },
     title: s.name,
     description: s.tagline,
     openGraph: { title: `${s.name} | East Tech Hub`, description: s.tagline, images: [{ url: s.image }] },
@@ -113,7 +115,7 @@ export default async function ServicePage({ params }: Props) {
                 {s.included.map((b) => <li key={b}><Check />{b}</li>)}
               </ul>
               <div className="svc-media">
-                <Image src={s.image} alt="" fill sizes="(max-width: 1000px) 100vw, 50vw" />
+                <Image src={s.image} alt={altFor(s.image, s.name)} fill sizes="(max-width: 1000px) 100vw, 50vw" />
               </div>
             </div>
             <div className="panel glass reveal">
@@ -122,7 +124,7 @@ export default async function ServicePage({ params }: Props) {
                 {s.process.map((p, i) => (
                   <div className="step" key={p.title}>
                     <span className="n">{String(i + 1).padStart(2, '0')}</span>
-                    <div><h4>{p.title}</h4><p>{p.body}</p></div>
+                    <div><h3>{p.title}</h3><p>{p.body}</p></div>
                   </div>
                 ))}
               </div>
@@ -181,7 +183,7 @@ export default async function ServicePage({ params }: Props) {
             {others.map((o) => (
               <Link href={`/services/${o.slug}`} className="pcard reveal" key={o.slug}>
                 <div className="pcard-media">
-                  <Image src={o.image} alt="" width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
+                  <Image src={o.image} alt={altFor(o.image, o.name)} width={1000} height={563} sizes="(max-width: 1000px) 100vw, 33vw" />
                 </div>
                 <div className="pcard-body">
                   <span className="kicker">{o.region.split(' · ')[0]}</span>

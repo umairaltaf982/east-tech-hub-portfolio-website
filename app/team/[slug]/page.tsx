@@ -17,7 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const m = getMember(slug);
   if (!m) return {};
-  return { title: `${m.name} — ${m.role}`, description: m.short };
+  return {
+    alternates: { canonical: `/team/${m.slug}` },
+    title: `${m.name} — ${m.role}`,
+    description: m.short,
+  };
 }
 
 export default async function MemberPage({ params }: Props) {

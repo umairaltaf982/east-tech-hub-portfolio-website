@@ -4,6 +4,7 @@ import { clientMarks, stats } from '@/lib/site';
 import { techRail } from '@/lib/services';
 import { testimonials } from '@/lib/content';
 import { ArrowRight, ChevronRight, Star } from './Icons';
+import { altFor } from '@/lib/image-alt';
 
 export function TrustStrip({ caption = 'Operators who work with us' }: { caption?: string }) {
   return (
@@ -77,7 +78,7 @@ export function Breadcrumb({ items }: { items: { href?: string; label: string }[
 export function CaseCard({ c }: { c: { kpi: string; kpiLabel: string; title: string; body: string; tag: string; image: string } }) {
   return (
     <article className="case reveal">
-      <Image src={c.image} alt="" width={1000} height={700} sizes="(max-width: 900px) 100vw, 33vw" />
+      <Image src={c.image} alt={altFor(c.image, c.title)} width={1000} height={700} sizes="(max-width: 900px) 100vw, 33vw" />
       <div className="cb">
         <span className="kpi tnum">{c.kpi}</span>
         <span className="kl">{c.kpiLabel}</span>
@@ -129,7 +130,7 @@ export function TestimonialMarquee() {
       </div>
       <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
       <figcaption className="tperson">
-        <Image src={t.avatar} alt="" width={92} height={92} className="avatar" />
+        <Image src={t.avatar} alt={altFor(t.avatar, t.name)} width={92} height={92} className="avatar" />
         <div><b>{t.name}</b><span>{t.meta}</span></div>
       </figcaption>
     </figure>

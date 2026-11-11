@@ -356,7 +356,7 @@ h1,h2,h3,h4{margin:0;letter-spacing:-.035em;line-height:1.08;font-weight:800;tex
 .step{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:1.25rem 0;border-top:1px solid var(--line)}
 .step:last-child{border-bottom:1px solid var(--line)}
 .step .n{font-size:.72rem;font-weight:800;color:var(--azure);padding-top:.3rem;letter-spacing:.08em}
-.step h4{font-size:1.02rem;margin-bottom:.3rem}
+.step h3{font-size:1.02rem;margin-bottom:.3rem}
 .step p{color:var(--soft);font-size:.91rem;line-height:1.68;max-width:62ch}
 
 /* ---------- faq ---------- */
@@ -397,7 +397,7 @@ h1,h2,h3,h4{margin:0;letter-spacing:-.035em;line-height:1.08;font-weight:800;tex
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:2.2rem;padding-bottom:2.4rem}
 .footer img.flogo{height:34px;width:auto;margin-bottom:1rem}
 .footer p{font-size:.86rem;line-height:1.7;max-width:32ch}
-.footer h4{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6379A0;margin-bottom:1rem}
+.footer h3{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6379A0;margin-bottom:1rem}
 .footer li{margin-bottom:.58rem}
 .footer li a,.footer li span{font-size:.87rem;transition:color .25s}
 .footer li a:hover{color:#fff}

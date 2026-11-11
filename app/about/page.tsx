@@ -124,7 +124,7 @@ export default function AboutPage() {
             {onboarding.map((s, i) => (
               <div className="step" key={s.title}>
                 <span className="n">{String(i + 1).padStart(2, '0')}</span>
-                <div><h4>{s.title}</h4><p>{s.body}</p></div>
+                <div><h3>{s.title}</h3><p>{s.body}</p></div>
               </div>
             ))}
           </div>

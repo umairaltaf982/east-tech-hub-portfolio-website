@@ -5,6 +5,7 @@ import { services } from '@/lib/services';
 import { industries } from '@/lib/content';
 import { ArrowRight, Check } from '@/components/Icons';
 import { Cta, TechRail } from '@/components/Sections';
+import { altFor } from '@/lib/image-alt';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -33,7 +34,7 @@ export default function ServicesPage() {
             {services.map((s) => (
               <Link href={`/services/${s.slug}`} className="dcard reveal" key={s.slug}>
                 <div className="dcard-media">
-                  <Image src={s.image} alt="" width={1000} height={563} sizes="(max-width: 1000px) 100vw, 50vw" />
+                  <Image src={s.image} alt={altFor(s.image, s.name)} width={1000} height={563} sizes="(max-width: 1000px) 100vw, 50vw" />
                   <span className="chip">{s.region.split(' · ')[0]}</span>
                 </div>
                 <div className="dcard-body">
